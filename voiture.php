@@ -16,19 +16,54 @@ Class Voiture{
     public function getMarque() {
         return $this->_marque;
     }
+    public function getModele() {
+        return $this->_modele;
+    }
+    public function getNbPortes() {
+        return $this->_nbPortes;
+    }
+    public function getVitesseActuelle() {
+        return $this->_vitesseActuelle;
+    }
     //Le Setter est une méthode qui permet de modifier la valeur d'un attribut privé ou protégé. 
     public function setMarque($marque) {
     $this->_marque = $marque;
+}   
+    public function setModele($modele) {
+    $this->_marque = $modele;
+}   
+    public function setNbPortes($nbPortes) {
+    $this->_marque = $nbPortes;
+}   
+    public function setVitesseActuelle($vitesseActuelle) {
+    $this->_marque = $vitesseActuelle;
 }   
 
 /*la méthode permet de mettre l'objet en action en utilisant des fonctions
     propres à l'objet  */    
     public function demarrer(){
+        if ($this->_vitesseActuelle == 0){
+            $this->_vitesseActuelle += 1;
+        }
+        else {
+            return $this->_vitesseActuelle;
+        }
     }
-        public function accelerer(){  
+    public function accelerer(){
+        if ($this->_vitesseActuelle > 0){
+            $this->_vitesseActuelle += 10;
+            }
+        else { return $this->_vitesseActuelle; 
+        }
     }
-        public function stopper(){
+    public function stopper(){
+            if ($this->_vitesseActuelle == 0) {
+        return "La voiture est arrêtée.";
+    } else {
+        return $this->_vitesseActuelle;
     }
+}
+    
 
 /* Méthode toString reprend les attributs et les renvois
      sous forme de string*/
@@ -39,21 +74,20 @@ Class Voiture{
                 Vitesse actuelle: {$this->_vitesseActuelle}";
     }
 
-
 /*Le Constructeur est l'artisan de l'objet, il se base sur la classe et 
     initialise les attributs*/
     
     //La fonction magique initialise les attributs de l'objet
-    public function __construct($marque, $modele, $nbPortes, $vitesseActuelle){
+    public function __construct($marque, $modele, $nbPortes){
         $this->_marque = $marque;             
         $this->_modele = $modele;              
         $this->_nbPortes = $nbPortes;          
-        $this->_vitesseActuelle = $vitesseActuelle;
+        $this->_vitesseActuelle = 0;
     }
 }
 //Création de l'objet Voiture qui spécifie les attributs
-$voiture1 = new Voiture("Peugeot","206",2,0);
-$voiture2 = new Voiture("Peugeot","308",5,0);
+$voiture1 = new Voiture("Peugeot","206",2);
+$voiture2 = new Voiture("Peugeot","308",5);
 
 /*L'Encapsulation permet de rendre plus ou moins accessibles les attributs et 
     les méthodes de l'objet notamment dans le but 
@@ -62,5 +96,6 @@ $voiture2 = new Voiture("Peugeot","308",5,0);
         public : accessible partout
         private : accessible uniquement dans la classe
         protected : accessible dans la classe et ses sous-classes (héritage)*/
+
 
 
