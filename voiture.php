@@ -52,5 +52,5 @@ $Voiture2 = new Voiture("Peugeot","308","5","0");
 /*L'Encapsulation permet de rendre plus ou moins accessibles les attributs et 
     les méthodes de l'objet notamment dans le but 
     d'en limiter les modifications qui le dénaturent enleur donnant un niveau d'accès.
-
     Il y en a 3 "public","private","protected"*/
+
