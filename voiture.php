@@ -30,13 +30,13 @@ Class Voiture{
     $this->_marque = $marque;
 }   
     public function setModele($modele) {
-    $this->_marque = $modele;
+    $this->_modele = $modele;
 }   
     public function setNbPortes($nbPortes) {
-    $this->_marque = $nbPortes;
+    $this->_nbPortes = $nbPortes;
 }   
     public function setVitesseActuelle($vitesseActuelle) {
-    $this->_marque = $vitesseActuelle;
+    $this->_vitesseActuelle = $vitesseActuelle;
 }   
 
 /*la méthode permet de mettre l'objet en action en utilisant des fonctions
@@ -96,6 +96,7 @@ $voiture2 = new Voiture("Peugeot","308",5);
         public : accessible partout
         private : accessible uniquement dans la classe
         protected : accessible dans la classe et ses sous-classes (héritage)*/
+
 
 
 
