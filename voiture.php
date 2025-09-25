@@ -58,7 +58,7 @@ Class Voiture{
     }
     public function stopper(){
             if ($this->_vitesseActuelle == 0) {
-        return "La voiture est arrêtée.";
+        return $this->_vitesseActuelle;
     } else {
         return $this->_vitesseActuelle;
     }
@@ -96,6 +96,7 @@ $voiture2 = new Voiture("Peugeot","308",5);
         public : accessible partout
         private : accessible uniquement dans la classe
         protected : accessible dans la classe et ses sous-classes (héritage)*/
+
 
 
 
