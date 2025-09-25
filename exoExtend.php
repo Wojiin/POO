@@ -68,5 +68,5 @@ $v2 = new VoitureElec("Peugeot","308","I3");
 //Infos
 $v1-> infosVehicules(1);
 echo "<br><br>";
-
 $v2-> infosVehicules(2);
+
