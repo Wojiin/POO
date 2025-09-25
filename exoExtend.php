@@ -35,7 +35,7 @@ Class Voiture {
               Nom et modèle du véhicule : {$this->_marque} {$this->_modele} <br>";
     }
 }
-//Extends
+//Extend
 final Class VoitureElec extends Voiture {
     //Attributs
     private $_moteur;
@@ -68,4 +68,5 @@ $v2 = new VoitureElec("Peugeot","308","I3");
 //Infos
 $v1-> infosVehicules(1);
 echo "<br><br>";
+
 $v2-> infosVehicules(2);
