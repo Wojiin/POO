@@ -91,15 +91,14 @@ Class Voiture{
                 Vitesse actuelle: {$this->_vitesseActuelle}";
     }
 //infos
-public function infosVehicules(){
-    $infos= array($v1,$v2);
-    foreach  ($infos as $items){
-        echo "Infos véhicule [$items] <br>
+public function infosVehicules($v){
+
+        echo "Infos véhicule $v <br>
               ******************* <br>
               Nom et modèle du véhicule : {$this->_marque}{$this->_modele} <br>
               Nombre de portes: {$this->_nbPortes} <br> 
               Sa vitesse actuelle est de : {$this->_vitesseActuelle} km/h <br>";
-    }
+    
 }
 
 }
@@ -112,5 +111,5 @@ echo $v2-> demarrer();
 echo $v2-> decelerer(1);
 echo $v2-> stopper();
 echo $v2-> accelerer(20);
-$infos-> infosVehicules();
+infosVehicules($v1);
 
