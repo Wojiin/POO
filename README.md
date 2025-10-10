@@ -17,7 +17,7 @@ Ces exercices ont pour objectif d’appliquer les principes fondamentaux de la P
 - Définition et instanciation de classes et d’objets  
 - Propriétés et méthodes  
 - Encapsulation (`public`, `protected`, `private`)  
-- Constructeurs et destructeurs  
+- Constructeurs  
 - Héritage et classes dérivées  
 - Polymorphisme et réutilisation de code  
 
